@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'Sections_Example' do
+  pod 'Sections', :path => '../'
+
+  target 'Sections_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
