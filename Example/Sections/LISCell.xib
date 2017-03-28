@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LISCell" id="tfn-uA-taq" customClass="LISCell">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="314" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0px-CC-DXb">
+                        <rect key="frame" x="0.0" y="0.0" width="314" height="84"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cheque especial (LIS)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Od-Ze-PYG">
+                                <rect key="frame" x="16" y="0.0" width="160" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.19215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="valor disponível" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5G-Gw-t48">
+                                <rect key="frame" x="16" y="43" width="111" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 5.000,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGh-hQ-hCy">
+                                <rect key="frame" x="16" y="70" width="90" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.19215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DGh-hQ-hCy" firstAttribute="leading" secondItem="a5G-Gw-t48" secondAttribute="leading" id="8gb-56-WEE"/>
+                            <constraint firstItem="a5G-Gw-t48" firstAttribute="top" secondItem="3Od-Ze-PYG" secondAttribute="bottom" constant="23" id="FC6-7c-vh6"/>
+                            <constraint firstItem="3Od-Ze-PYG" firstAttribute="leading" secondItem="0px-CC-DXb" secondAttribute="leading" constant="16" id="P3B-iM-IWH"/>
+                            <constraint firstItem="DGh-hQ-hCy" firstAttribute="top" secondItem="a5G-Gw-t48" secondAttribute="bottom" constant="7" id="RRf-Ik-ZKj"/>
+                            <constraint firstItem="a5G-Gw-t48" firstAttribute="leading" secondItem="3Od-Ze-PYG" secondAttribute="leading" id="Wl6-zK-sAZ"/>
+                            <constraint firstItem="DGh-hQ-hCy" firstAttribute="top" secondItem="0px-CC-DXb" secondAttribute="top" constant="70" id="d9g-tD-yYi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0px-CC-DXb" firstAttribute="leading" secondItem="tfn-uA-taq" secondAttribute="leading" id="ZQv-A6-1hy"/>
+                <constraint firstAttribute="trailing" secondItem="0px-CC-DXb" secondAttribute="trailing" id="dhI-B4-Hph"/>
+                <constraint firstAttribute="bottom" secondItem="0px-CC-DXb" secondAttribute="bottom" id="e0B-4Y-MrR"/>
+                <constraint firstItem="0px-CC-DXb" firstAttribute="top" secondItem="tfn-uA-taq" secondAttribute="top" id="hKO-Sy-fEq"/>
+            </constraints>
+            <size key="customSize" width="314" height="84"/>
+            <point key="canvasLocation" x="19" y="-70"/>
+        </collectionViewCell>
+    </objects>
+</document>

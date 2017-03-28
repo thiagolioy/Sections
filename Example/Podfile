@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'Sections_Example' do
   pod 'Sections', :path => '../'
+  pod 'Bricks'
 
   target 'Sections_Tests' do
     inherit! :search_paths

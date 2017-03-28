@@ -1,0 +1,22 @@
+{
+  "name": "Sections",
+  "version": "0.1.0",
+  "summary": "A short description of Sections.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/thiagolioy/Sections",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "thiagolioy": "thiago lioy"
+  },
+  "source": {
+    "git": "https://github.com/thiagolioy/Sections.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Sections/Classes/**/*"
+}

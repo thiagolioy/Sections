@@ -9,5 +9,5 @@
 @import UIKit;
 
 @interface STViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end

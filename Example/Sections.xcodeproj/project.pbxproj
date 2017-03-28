@@ -23,6 +23,45 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		99E747BD1E8AE4E6006B805C /* SaldoCardSectionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747B81E8AE4E6006B805C /* SaldoCardSectionBuilder.m */; };
+		99E747BE1E8AE4E6006B805C /* PendenciasCardSectionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747BA1E8AE4E6006B805C /* PendenciasCardSectionBuilder.m */; };
+		99E747BF1E8AE4E6006B805C /* GridSectionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747BC1E8AE4E6006B805C /* GridSectionBuilder.m */; };
+		99E747C71E8AE4FE006B805C /* PendenciasCardSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747C21E8AE4FE006B805C /* PendenciasCardSectionCell.m */; };
+		99E747C81E8AE4FE006B805C /* SaldoCardSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747C41E8AE4FE006B805C /* SaldoCardSectionCell.m */; };
+		99E747C91E8AE4FE006B805C /* SaldoExpandedCardSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747C61E8AE4FE006B805C /* SaldoExpandedCardSectionCell.m */; };
+		99E747DB1E8AE52C006B805C /* PriceCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747CC1E8AE52C006B805C /* PriceCellBuilder.m */; };
+		99E747DC1E8AE52C006B805C /* WhiteSpaceCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747CE1E8AE52C006B805C /* WhiteSpaceCellBuilder.m */; };
+		99E747DD1E8AE52D006B805C /* SaldoCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747D01E8AE52C006B805C /* SaldoCellBuilder.m */; };
+		99E747DE1E8AE52D006B805C /* ActionsCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747D21E8AE52C006B805C /* ActionsCellBuilder.m */; };
+		99E747DF1E8AE52D006B805C /* LISCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747D41E8AE52C006B805C /* LISCellBuilder.m */; };
+		99E747E01E8AE52D006B805C /* LISUtilizadoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747D61E8AE52C006B805C /* LISUtilizadoBuilder.m */; };
+		99E747E11E8AE52D006B805C /* SaldoLISBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747D81E8AE52C006B805C /* SaldoLISBuilder.m */; };
+		99E747E21E8AE52D006B805C /* PendenciasCellBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747DA1E8AE52C006B805C /* PendenciasCellBuilder.m */; };
+		99E748021E8AE54F006B805C /* SaldoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747E51E8AE54F006B805C /* SaldoCell.m */; };
+		99E748031E8AE54F006B805C /* SaldoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747E61E8AE54F006B805C /* SaldoCell.xib */; };
+		99E748041E8AE54F006B805C /* PriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747E81E8AE54F006B805C /* PriceCell.m */; };
+		99E748051E8AE54F006B805C /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747E91E8AE54F006B805C /* PriceCell.xib */; };
+		99E748061E8AE54F006B805C /* WhiteSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747EB1E8AE54F006B805C /* WhiteSpaceCell.m */; };
+		99E748071E8AE54F006B805C /* WhiteSpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747EC1E8AE54F006B805C /* WhiteSpaceCell.xib */; };
+		99E748081E8AE54F006B805C /* ActionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747EE1E8AE54F006B805C /* ActionsCell.m */; };
+		99E748091E8AE54F006B805C /* ActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747EF1E8AE54F006B805C /* ActionsCell.xib */; };
+		99E7480A1E8AE54F006B805C /* LISCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747F11E8AE54F006B805C /* LISCell.m */; };
+		99E7480B1E8AE54F006B805C /* LISCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747F21E8AE54F006B805C /* LISCell.xib */; };
+		99E7480C1E8AE54F006B805C /* SaldoLISCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747F41E8AE54F006B805C /* SaldoLISCell.m */; };
+		99E7480D1E8AE54F006B805C /* SaldoLISCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747F51E8AE54F006B805C /* SaldoLISCell.xib */; };
+		99E7480E1E8AE54F006B805C /* LISUtilizadoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747F71E8AE54F006B805C /* LISUtilizadoCell.m */; };
+		99E7480F1E8AE54F006B805C /* LISUtilizadoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747F81E8AE54F006B805C /* LISUtilizadoCell.xib */; };
+		99E748101E8AE54F006B805C /* PendenciasCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747FA1E8AE54F006B805C /* PendenciasCell.m */; };
+		99E748111E8AE54F006B805C /* PendenciasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747FB1E8AE54F006B805C /* PendenciasCell.xib */; };
+		99E748121E8AE54F006B805C /* FeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E747FD1E8AE54F006B805C /* FeedbackCell.m */; };
+		99E748131E8AE54F006B805C /* FeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E747FE1E8AE54F006B805C /* FeedbackCell.xib */; };
+		99E748141E8AE54F006B805C /* CollectionViewReusableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E748001E8AE54F006B805C /* CollectionViewReusableHeader.m */; };
+		99E748151E8AE54F006B805C /* CollectionViewReusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E748011E8AE54F006B805C /* CollectionViewReusableHeader.xib */; };
+		99E748191E8AE57E006B805C /* GridSectionImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E748181E8AE57E006B805C /* GridSectionImpl.m */; };
+		99E7481C1E8AE586006B805C /* CardSectionImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E7481B1E8AE586006B805C /* CardSectionImpl.m */; };
+		99E748201E8AE595006B805C /* GridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E7481E1E8AE595006B805C /* GridCollectionViewCell.m */; };
+		99E748211E8AE595006B805C /* GridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E7481F1E8AE595006B805C /* GridCollectionViewCell.xib */; };
+		99E748251E8AE5A7006B805C /* CardsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E748241E8AE5A7006B805C /* CardsDatasource.m */; };
 		F7AF8C920926035A6F3C562B /* Pods_Sections_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44180B463435749A4A062E5D /* Pods_Sections_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002F5B5B4B097B3BA0798CE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		002F5B5B4B097B3BA0798CE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2B33AA5B160E7764BA5BC0BB /* Pods-Sections_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sections_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sections_Tests/Pods-Sections_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		44180B463435749A4A062E5D /* Pods_Sections_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sections_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* Sections_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sections_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,10 +102,77 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		897873E611E4514F74987B63 /* Pods_Sections_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sections_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B895D7AE9FF3D0DF1B13D32 /* Pods-Sections_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sections_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sections_Tests/Pods-Sections_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		99E747B71E8AE4E6006B805C /* SaldoCardSectionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoCardSectionBuilder.h; sourceTree = "<group>"; };
+		99E747B81E8AE4E6006B805C /* SaldoCardSectionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoCardSectionBuilder.m; sourceTree = "<group>"; };
+		99E747B91E8AE4E6006B805C /* PendenciasCardSectionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendenciasCardSectionBuilder.h; sourceTree = "<group>"; };
+		99E747BA1E8AE4E6006B805C /* PendenciasCardSectionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendenciasCardSectionBuilder.m; sourceTree = "<group>"; };
+		99E747BB1E8AE4E6006B805C /* GridSectionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSectionBuilder.h; sourceTree = "<group>"; };
+		99E747BC1E8AE4E6006B805C /* GridSectionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridSectionBuilder.m; sourceTree = "<group>"; };
+		99E747C11E8AE4FE006B805C /* PendenciasCardSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendenciasCardSectionCell.h; sourceTree = "<group>"; };
+		99E747C21E8AE4FE006B805C /* PendenciasCardSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendenciasCardSectionCell.m; sourceTree = "<group>"; };
+		99E747C31E8AE4FE006B805C /* SaldoCardSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoCardSectionCell.h; sourceTree = "<group>"; };
+		99E747C41E8AE4FE006B805C /* SaldoCardSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoCardSectionCell.m; sourceTree = "<group>"; };
+		99E747C51E8AE4FE006B805C /* SaldoExpandedCardSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoExpandedCardSectionCell.h; sourceTree = "<group>"; };
+		99E747C61E8AE4FE006B805C /* SaldoExpandedCardSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoExpandedCardSectionCell.m; sourceTree = "<group>"; };
+		99E747CB1E8AE52C006B805C /* PriceCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceCellBuilder.h; sourceTree = "<group>"; };
+		99E747CC1E8AE52C006B805C /* PriceCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceCellBuilder.m; sourceTree = "<group>"; };
+		99E747CD1E8AE52C006B805C /* WhiteSpaceCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteSpaceCellBuilder.h; sourceTree = "<group>"; };
+		99E747CE1E8AE52C006B805C /* WhiteSpaceCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteSpaceCellBuilder.m; sourceTree = "<group>"; };
+		99E747CF1E8AE52C006B805C /* SaldoCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoCellBuilder.h; sourceTree = "<group>"; };
+		99E747D01E8AE52C006B805C /* SaldoCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoCellBuilder.m; sourceTree = "<group>"; };
+		99E747D11E8AE52C006B805C /* ActionsCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsCellBuilder.h; sourceTree = "<group>"; };
+		99E747D21E8AE52C006B805C /* ActionsCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsCellBuilder.m; sourceTree = "<group>"; };
+		99E747D31E8AE52C006B805C /* LISCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISCellBuilder.h; sourceTree = "<group>"; };
+		99E747D41E8AE52C006B805C /* LISCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LISCellBuilder.m; sourceTree = "<group>"; };
+		99E747D51E8AE52C006B805C /* LISUtilizadoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISUtilizadoBuilder.h; sourceTree = "<group>"; };
+		99E747D61E8AE52C006B805C /* LISUtilizadoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LISUtilizadoBuilder.m; sourceTree = "<group>"; };
+		99E747D71E8AE52C006B805C /* SaldoLISBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoLISBuilder.h; sourceTree = "<group>"; };
+		99E747D81E8AE52C006B805C /* SaldoLISBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoLISBuilder.m; sourceTree = "<group>"; };
+		99E747D91E8AE52C006B805C /* PendenciasCellBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendenciasCellBuilder.h; sourceTree = "<group>"; };
+		99E747DA1E8AE52C006B805C /* PendenciasCellBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendenciasCellBuilder.m; sourceTree = "<group>"; };
+		99E747E41E8AE54F006B805C /* SaldoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoCell.h; sourceTree = "<group>"; };
+		99E747E51E8AE54F006B805C /* SaldoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoCell.m; sourceTree = "<group>"; };
+		99E747E61E8AE54F006B805C /* SaldoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaldoCell.xib; sourceTree = "<group>"; };
+		99E747E71E8AE54F006B805C /* PriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceCell.h; sourceTree = "<group>"; };
+		99E747E81E8AE54F006B805C /* PriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceCell.m; sourceTree = "<group>"; };
+		99E747E91E8AE54F006B805C /* PriceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
+		99E747EA1E8AE54F006B805C /* WhiteSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteSpaceCell.h; sourceTree = "<group>"; };
+		99E747EB1E8AE54F006B805C /* WhiteSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteSpaceCell.m; sourceTree = "<group>"; };
+		99E747EC1E8AE54F006B805C /* WhiteSpaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteSpaceCell.xib; sourceTree = "<group>"; };
+		99E747ED1E8AE54F006B805C /* ActionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsCell.h; sourceTree = "<group>"; };
+		99E747EE1E8AE54F006B805C /* ActionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsCell.m; sourceTree = "<group>"; };
+		99E747EF1E8AE54F006B805C /* ActionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionsCell.xib; sourceTree = "<group>"; };
+		99E747F01E8AE54F006B805C /* LISCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISCell.h; sourceTree = "<group>"; };
+		99E747F11E8AE54F006B805C /* LISCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LISCell.m; sourceTree = "<group>"; };
+		99E747F21E8AE54F006B805C /* LISCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LISCell.xib; sourceTree = "<group>"; };
+		99E747F31E8AE54F006B805C /* SaldoLISCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaldoLISCell.h; sourceTree = "<group>"; };
+		99E747F41E8AE54F006B805C /* SaldoLISCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaldoLISCell.m; sourceTree = "<group>"; };
+		99E747F51E8AE54F006B805C /* SaldoLISCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaldoLISCell.xib; sourceTree = "<group>"; };
+		99E747F61E8AE54F006B805C /* LISUtilizadoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISUtilizadoCell.h; sourceTree = "<group>"; };
+		99E747F71E8AE54F006B805C /* LISUtilizadoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LISUtilizadoCell.m; sourceTree = "<group>"; };
+		99E747F81E8AE54F006B805C /* LISUtilizadoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LISUtilizadoCell.xib; sourceTree = "<group>"; };
+		99E747F91E8AE54F006B805C /* PendenciasCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendenciasCell.h; sourceTree = "<group>"; };
+		99E747FA1E8AE54F006B805C /* PendenciasCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendenciasCell.m; sourceTree = "<group>"; };
+		99E747FB1E8AE54F006B805C /* PendenciasCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendenciasCell.xib; sourceTree = "<group>"; };
+		99E747FC1E8AE54F006B805C /* FeedbackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackCell.h; sourceTree = "<group>"; };
+		99E747FD1E8AE54F006B805C /* FeedbackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackCell.m; sourceTree = "<group>"; };
+		99E747FE1E8AE54F006B805C /* FeedbackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackCell.xib; sourceTree = "<group>"; };
+		99E747FF1E8AE54F006B805C /* CollectionViewReusableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewReusableHeader.h; sourceTree = "<group>"; };
+		99E748001E8AE54F006B805C /* CollectionViewReusableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewReusableHeader.m; sourceTree = "<group>"; };
+		99E748011E8AE54F006B805C /* CollectionViewReusableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewReusableHeader.xib; sourceTree = "<group>"; };
+		99E748171E8AE57E006B805C /* GridSectionImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSectionImpl.h; sourceTree = "<group>"; };
+		99E748181E8AE57E006B805C /* GridSectionImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridSectionImpl.m; sourceTree = "<group>"; };
+		99E7481A1E8AE586006B805C /* CardSectionImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSectionImpl.h; sourceTree = "<group>"; };
+		99E7481B1E8AE586006B805C /* CardSectionImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSectionImpl.m; sourceTree = "<group>"; };
+		99E7481D1E8AE595006B805C /* GridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewCell.h; sourceTree = "<group>"; };
+		99E7481E1E8AE595006B805C /* GridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewCell.m; sourceTree = "<group>"; };
+		99E7481F1E8AE595006B805C /* GridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridCollectionViewCell.xib; sourceTree = "<group>"; };
+		99E748231E8AE5A7006B805C /* CardsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsDatasource.h; sourceTree = "<group>"; };
+		99E748241E8AE5A7006B805C /* CardsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsDatasource.m; sourceTree = "<group>"; };
 		9D212FE799B5D3DBCF048E9C /* Pods-Sections_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sections_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sections_Example/Pods-Sections_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9FBD0A7315D53EB3DA845025 /* Sections.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Sections.podspec; path = ../Sections.podspec; sourceTree = "<group>"; };
+		9FBD0A7315D53EB3DA845025 /* Sections.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Sections.podspec; path = ../Sections.podspec; sourceTree = "<group>"; };
 		C145D30C11C5BAA500555BBC /* Pods-Sections_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sections_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sections_Example/Pods-Sections_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D1E0282F73BCF0A5B0E56E85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D1E0282F73BCF0A5B0E56E85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +249,13 @@
 		6003F593195388D20070C39A /* Example for Sections */ = {
 			isa = PBXGroup;
 			children = (
+				99E748221E8AE59E006B805C /* Datasource */,
+				99E748161E8AE56F006B805C /* SectionImplementations */,
+				99E747E31E8AE540006B805C /* Cells */,
+				99E747CA1E8AE51B006B805C /* CellBuilders */,
+				99E747C01E8AE4EF006B805C /* SectionCells */,
+				99E747B61E8AE4D9006B805C /* SectionBuilders */,
+				99E747B51E8AE4BE006B805C /* UI */,
 				6003F59C195388D20070C39A /* STAppDelegate.h */,
 				6003F59D195388D20070C39A /* STAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -194,6 +307,122 @@
 				002F5B5B4B097B3BA0798CE5 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		99E747B51E8AE4BE006B805C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		99E747B61E8AE4D9006B805C /* SectionBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				99E747B71E8AE4E6006B805C /* SaldoCardSectionBuilder.h */,
+				99E747B81E8AE4E6006B805C /* SaldoCardSectionBuilder.m */,
+				99E747B91E8AE4E6006B805C /* PendenciasCardSectionBuilder.h */,
+				99E747BA1E8AE4E6006B805C /* PendenciasCardSectionBuilder.m */,
+				99E747BB1E8AE4E6006B805C /* GridSectionBuilder.h */,
+				99E747BC1E8AE4E6006B805C /* GridSectionBuilder.m */,
+			);
+			name = SectionBuilders;
+			sourceTree = "<group>";
+		};
+		99E747C01E8AE4EF006B805C /* SectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				99E747C11E8AE4FE006B805C /* PendenciasCardSectionCell.h */,
+				99E747C21E8AE4FE006B805C /* PendenciasCardSectionCell.m */,
+				99E747C31E8AE4FE006B805C /* SaldoCardSectionCell.h */,
+				99E747C41E8AE4FE006B805C /* SaldoCardSectionCell.m */,
+				99E747C51E8AE4FE006B805C /* SaldoExpandedCardSectionCell.h */,
+				99E747C61E8AE4FE006B805C /* SaldoExpandedCardSectionCell.m */,
+			);
+			name = SectionCells;
+			sourceTree = "<group>";
+		};
+		99E747CA1E8AE51B006B805C /* CellBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				99E747CB1E8AE52C006B805C /* PriceCellBuilder.h */,
+				99E747CC1E8AE52C006B805C /* PriceCellBuilder.m */,
+				99E747CD1E8AE52C006B805C /* WhiteSpaceCellBuilder.h */,
+				99E747CE1E8AE52C006B805C /* WhiteSpaceCellBuilder.m */,
+				99E747CF1E8AE52C006B805C /* SaldoCellBuilder.h */,
+				99E747D01E8AE52C006B805C /* SaldoCellBuilder.m */,
+				99E747D11E8AE52C006B805C /* ActionsCellBuilder.h */,
+				99E747D21E8AE52C006B805C /* ActionsCellBuilder.m */,
+				99E747D31E8AE52C006B805C /* LISCellBuilder.h */,
+				99E747D41E8AE52C006B805C /* LISCellBuilder.m */,
+				99E747D51E8AE52C006B805C /* LISUtilizadoBuilder.h */,
+				99E747D61E8AE52C006B805C /* LISUtilizadoBuilder.m */,
+				99E747D71E8AE52C006B805C /* SaldoLISBuilder.h */,
+				99E747D81E8AE52C006B805C /* SaldoLISBuilder.m */,
+				99E747D91E8AE52C006B805C /* PendenciasCellBuilder.h */,
+				99E747DA1E8AE52C006B805C /* PendenciasCellBuilder.m */,
+			);
+			name = CellBuilders;
+			sourceTree = "<group>";
+		};
+		99E747E31E8AE540006B805C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				99E7481D1E8AE595006B805C /* GridCollectionViewCell.h */,
+				99E7481E1E8AE595006B805C /* GridCollectionViewCell.m */,
+				99E7481F1E8AE595006B805C /* GridCollectionViewCell.xib */,
+				99E747E41E8AE54F006B805C /* SaldoCell.h */,
+				99E747E51E8AE54F006B805C /* SaldoCell.m */,
+				99E747E61E8AE54F006B805C /* SaldoCell.xib */,
+				99E747E71E8AE54F006B805C /* PriceCell.h */,
+				99E747E81E8AE54F006B805C /* PriceCell.m */,
+				99E747E91E8AE54F006B805C /* PriceCell.xib */,
+				99E747EA1E8AE54F006B805C /* WhiteSpaceCell.h */,
+				99E747EB1E8AE54F006B805C /* WhiteSpaceCell.m */,
+				99E747EC1E8AE54F006B805C /* WhiteSpaceCell.xib */,
+				99E747ED1E8AE54F006B805C /* ActionsCell.h */,
+				99E747EE1E8AE54F006B805C /* ActionsCell.m */,
+				99E747EF1E8AE54F006B805C /* ActionsCell.xib */,
+				99E747F01E8AE54F006B805C /* LISCell.h */,
+				99E747F11E8AE54F006B805C /* LISCell.m */,
+				99E747F21E8AE54F006B805C /* LISCell.xib */,
+				99E747F31E8AE54F006B805C /* SaldoLISCell.h */,
+				99E747F41E8AE54F006B805C /* SaldoLISCell.m */,
+				99E747F51E8AE54F006B805C /* SaldoLISCell.xib */,
+				99E747F61E8AE54F006B805C /* LISUtilizadoCell.h */,
+				99E747F71E8AE54F006B805C /* LISUtilizadoCell.m */,
+				99E747F81E8AE54F006B805C /* LISUtilizadoCell.xib */,
+				99E747F91E8AE54F006B805C /* PendenciasCell.h */,
+				99E747FA1E8AE54F006B805C /* PendenciasCell.m */,
+				99E747FB1E8AE54F006B805C /* PendenciasCell.xib */,
+				99E747FC1E8AE54F006B805C /* FeedbackCell.h */,
+				99E747FD1E8AE54F006B805C /* FeedbackCell.m */,
+				99E747FE1E8AE54F006B805C /* FeedbackCell.xib */,
+				99E747FF1E8AE54F006B805C /* CollectionViewReusableHeader.h */,
+				99E748001E8AE54F006B805C /* CollectionViewReusableHeader.m */,
+				99E748011E8AE54F006B805C /* CollectionViewReusableHeader.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		99E748161E8AE56F006B805C /* SectionImplementations */ = {
+			isa = PBXGroup;
+			children = (
+				99E7481A1E8AE586006B805C /* CardSectionImpl.h */,
+				99E7481B1E8AE586006B805C /* CardSectionImpl.m */,
+				99E748171E8AE57E006B805C /* GridSectionImpl.h */,
+				99E748181E8AE57E006B805C /* GridSectionImpl.m */,
+			);
+			name = SectionImplementations;
+			sourceTree = "<group>";
+		};
+		99E748221E8AE59E006B805C /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				99E748231E8AE5A7006B805C /* CardsDatasource.h */,
+				99E748241E8AE5A7006B805C /* CardsDatasource.m */,
+			);
+			name = Datasource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +509,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				99E748131E8AE54F006B805C /* FeedbackCell.xib in Resources */,
+				99E748151E8AE54F006B805C /* CollectionViewReusableHeader.xib in Resources */,
+				99E748211E8AE595006B805C /* GridCollectionViewCell.xib in Resources */,
+				99E7480B1E8AE54F006B805C /* LISCell.xib in Resources */,
+				99E7480F1E8AE54F006B805C /* LISUtilizadoCell.xib in Resources */,
+				99E748091E8AE54F006B805C /* ActionsCell.xib in Resources */,
+				99E748031E8AE54F006B805C /* SaldoCell.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				99E7480D1E8AE54F006B805C /* SaldoLISCell.xib in Resources */,
+				99E748071E8AE54F006B805C /* WhiteSpaceCell.xib in Resources */,
+				99E748111E8AE54F006B805C /* PendenciasCell.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				99E748051E8AE54F006B805C /* PriceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +635,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* STAppDelegate.m in Sources */,
+				99E747DB1E8AE52C006B805C /* PriceCellBuilder.m in Sources */,
+				99E747BD1E8AE4E6006B805C /* SaldoCardSectionBuilder.m in Sources */,
+				99E747C71E8AE4FE006B805C /* PendenciasCardSectionCell.m in Sources */,
+				99E747DC1E8AE52C006B805C /* WhiteSpaceCellBuilder.m in Sources */,
+				99E748191E8AE57E006B805C /* GridSectionImpl.m in Sources */,
+				99E747C81E8AE4FE006B805C /* SaldoCardSectionCell.m in Sources */,
+				99E748041E8AE54F006B805C /* PriceCell.m in Sources */,
+				99E747BE1E8AE4E6006B805C /* PendenciasCardSectionBuilder.m in Sources */,
+				99E7480A1E8AE54F006B805C /* LISCell.m in Sources */,
+				99E748141E8AE54F006B805C /* CollectionViewReusableHeader.m in Sources */,
+				99E748061E8AE54F006B805C /* WhiteSpaceCell.m in Sources */,
+				99E7480E1E8AE54F006B805C /* LISUtilizadoCell.m in Sources */,
+				99E7481C1E8AE586006B805C /* CardSectionImpl.m in Sources */,
 				6003F5A7195388D20070C39A /* STViewController.m in Sources */,
+				99E747DE1E8AE52D006B805C /* ActionsCellBuilder.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				99E748101E8AE54F006B805C /* PendenciasCell.m in Sources */,
+				99E748081E8AE54F006B805C /* ActionsCell.m in Sources */,
+				99E747DF1E8AE52D006B805C /* LISCellBuilder.m in Sources */,
+				99E748201E8AE595006B805C /* GridCollectionViewCell.m in Sources */,
+				99E747BF1E8AE4E6006B805C /* GridSectionBuilder.m in Sources */,
+				99E747E21E8AE52D006B805C /* PendenciasCellBuilder.m in Sources */,
+				99E747E01E8AE52D006B805C /* LISUtilizadoBuilder.m in Sources */,
+				99E747C91E8AE4FE006B805C /* SaldoExpandedCardSectionCell.m in Sources */,
+				99E748021E8AE54F006B805C /* SaldoCell.m in Sources */,
+				99E747E11E8AE52D006B805C /* SaldoLISBuilder.m in Sources */,
+				99E747DD1E8AE52D006B805C /* SaldoCellBuilder.m in Sources */,
+				99E748121E8AE54F006B805C /* FeedbackCell.m in Sources */,
+				99E7480C1E8AE54F006B805C /* SaldoLISCell.m in Sources */,
+				99E748251E8AE5A7006B805C /* CardsDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
