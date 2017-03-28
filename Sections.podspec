@@ -29,7 +29,7 @@ See project example for more details.
   s.source           = { :git => 'https://github.com/thiagolioy/Sections.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/@tplioy'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'Sections/Classes/**/*'
 
