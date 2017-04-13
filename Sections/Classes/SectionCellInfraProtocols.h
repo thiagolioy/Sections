@@ -10,20 +10,28 @@
 
 @protocol CellDelegate;
 @protocol SectionCell <NSObject>
-
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                 andCellDelegate:(id<CellDelegate>) cellDelegate;
+@optional
+-(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView;
+@optional
+-(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
+                 andCellDelegate:(id<CellDelegate> _Nullable) cellDelegate;
 
 @property (weak, nonatomic) UICollectionView *collection;
 @property (weak, nonatomic) id<CellDelegate> delegate;
 @property (strong, nonatomic) NSArray *cellBuilders;
 
+@required
+-(void)registerCellsForBuilders;
 -(NSInteger)numberOfItems;
 -(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath;
 -(UICollectionViewCell*)sectionItemCellAtIndexPath:(NSIndexPath*) indexPath;
 
 @end
 
+typedef NS_ENUM(NSUInteger, CardSectionState) {
+    kRegularState,
+    kExpandedState
+};
 
 @protocol CellDelegate <NSObject>
 
@@ -34,9 +42,11 @@
 
 @end
 
-typedef NS_ENUM(NSUInteger, CardSectionState) {
-    kRegularState,
-    kExpandedState
+typedef NS_ENUM (NSInteger, SectionType) {
+    SaldoCardSection,
+    PendenciasCardSection,
+    FeedbackCardSection,
+    CobrancaCardSection
 };
 
 @protocol CardSectionDelegate;
@@ -83,7 +93,7 @@ typedef NS_ENUM(NSUInteger, CardSectionState) {
 
 
 @protocol SectionBuilderProtocol <NSObject>
-
+@property(nonatomic, assign) SectionType type;
 @property(weak, nonatomic) UICollectionView *collection;
 
 -(id<Section>)section;
@@ -95,7 +105,7 @@ typedef NS_ENUM(NSUInteger, CardSectionState) {
 
 
 @property(weak, nonatomic) id<SectionDelegate> delegate;
-
+@optional
 -(instancetype)initWithCollectionView:(UICollectionView*)collectionView
                   cardSectionDelegate:(id<SectionDelegate>) sectionDelegate;
 
@@ -106,7 +116,7 @@ typedef NS_ENUM(NSUInteger, CardSectionState) {
 
 
 @property(weak, nonatomic) id<CardSectionDelegate> delegate;
-
+@optional
 -(instancetype)initWithCollectionView:(UICollectionView*)collectionView
                   cardSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate;
 
