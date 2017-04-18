@@ -14,7 +14,7 @@
 -(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView;
 @optional
 -(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
-                 andCellDelegate:(id<CellDelegate> _Nullable) cellDelegate;
+                 andCellDelegate:(id<CellDelegate> _Nonnull) cellDelegate;
 
 @property (weak, nonatomic, nullable, readonly) UICollectionView *collection;
 @property (weak, nonatomic, nullable, readonly) id<CellDelegate> delegate;
