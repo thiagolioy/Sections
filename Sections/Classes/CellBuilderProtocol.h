@@ -12,20 +12,20 @@
 @protocol CellBuilderProtocol <NSObject>
 
 @required
-@property(weak, nonatomic) UICollectionView *collection;
+@property(weak, nonatomic, nullable) UICollectionView *collection;
 
 @optional
-@property(weak, nonatomic) id<CellDelegate> delegate;
+@property(weak, nonatomic, nullable) id<CellDelegate> delegate;
 
 @optional
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView;
+-(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView;
 @optional
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                 andCellDelegate:(id<CellDelegate>) cellDelegate;
+-(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
+                 andCellDelegate:(id<CellDelegate> _Nonnull) cellDelegate;
 
 @required
 -(void)registerCell;
--(UICollectionViewCell*)cellForItemAtIndexPath:(NSIndexPath*) indexPath;
+-(UICollectionViewCell* _Nonnull)cellForItemAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
 -(CGSize)sizeWithin:(CGRect)bounds;
 @end
 

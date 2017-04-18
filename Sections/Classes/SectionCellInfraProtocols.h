@@ -16,15 +16,15 @@
 -(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
                  andCellDelegate:(id<CellDelegate> _Nullable) cellDelegate;
 
-@property (weak, nonatomic) UICollectionView *collection;
-@property (weak, nonatomic) id<CellDelegate> delegate;
-@property (strong, nonatomic) NSArray *cellBuilders;
+@property (weak, nonatomic, nullable, readonly) UICollectionView *collection;
+@property (weak, nonatomic, nullable, readonly) id<CellDelegate> delegate;
+@property (strong, nonatomic, nonnull) NSArray *cellBuilders;
 
 @required
 -(void)registerCellsForBuilders;
 -(NSInteger)numberOfItems;
 -(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath;
--(UICollectionViewCell*)sectionItemCellAtIndexPath:(NSIndexPath*) indexPath;
+-(UICollectionViewCell* _Nonnull)sectionItemCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
 
 @end
 
@@ -53,50 +53,50 @@ typedef NS_ENUM (NSInteger, SectionType) {
 @protocol SectionDelegate;
 @protocol Section <NSObject>
 
-@property(weak, nonatomic) id<SectionDelegate> sectionDelegate;
+@property(weak, nonatomic, nullable) id<SectionDelegate> sectionDelegate;
 
 -(NSInteger)numberOfItems;
--(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath;
--(UICollectionViewCell*)sectionItemCellAtIndexPath:(NSIndexPath*) indexPath;
+-(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
+-(UICollectionViewCell* _Nonnull)sectionItemCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
 -(CGFloat)minimumInteritemSpacingForSectionAtIndex:(NSInteger) index;
 -(CGFloat)minimumLineSpacingForSectionAtIndex:(NSInteger) index;
 -(CGSize)sectionHeaderSize;
--(UICollectionReusableView*)sectionHeaderCellAtIndexPath:(NSIndexPath*) indexPath;
+-(UICollectionReusableView* _Nonnull)sectionHeaderCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
 -(UIEdgeInsets)insetForSectionAtIndex;
--(void)didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+-(void)didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 
 @protocol CardSection<Section>
 @property(nonatomic, assign, readonly) CardSectionState cardState;
-@property(nonatomic, strong) id<SectionCell> regularSectionCell;
-@property(nonatomic, strong) id<SectionCell> expandedSectionCell;
-@property(weak, nonatomic) id<CardSectionDelegate> cardSectionDelegate;
+@property(nonatomic, strong, nonnull) id<SectionCell> regularSectionCell;
+@property(nonatomic, strong, nullable) id<SectionCell> expandedSectionCell;
+@property(weak, nonatomic, nullable) id<CardSectionDelegate> cardSectionDelegate;
 
 -(void)toggleState;
--(id<SectionCell>)visibleSectionCell;
+-(id<SectionCell> _Nonnull)visibleSectionCell;
 
 @end
 
 @protocol CardSectionDelegate<NSObject>
--(void)updateCardSection:(id<CardSection>) cardSection;
--(void)presentDetailsFor:(id<CardSection>) cardSection;
--(void)presentAdditionalDetailsFor:(id<CardSection>) cardSection;
+-(void)updateCardSection:(id<CardSection> _Nonnull) cardSection;
+-(void)presentDetailsFor:(id<CardSection> _Nonnull) cardSection;
+-(void)presentAdditionalDetailsFor:(id<CardSection> _Nonnull) cardSection;
 @end
 
 
 
 
 @protocol SectionDelegate<NSObject>
--(void)didSelectSectionItemAtIndex:(NSInteger)index inSection:(id<Section>) section;
+-(void)didSelectSectionItemAtIndex:(NSInteger)index inSection:(id<Section> _Nonnull) section;
 @end
 
 
 @protocol SectionBuilderProtocol <NSObject>
 @property(nonatomic, assign) SectionType type;
-@property(weak, nonatomic) UICollectionView *collection;
+@property(weak, nonatomic, nullable) UICollectionView *collection;
 
--(id<Section>)section;
+-(id<Section> _Nonnull)section;
 
 @end
 
@@ -104,10 +104,10 @@ typedef NS_ENUM (NSInteger, SectionType) {
 @protocol GridBuilderProtocol <SectionBuilderProtocol>
 
 
-@property(weak, nonatomic) id<SectionDelegate> delegate;
+@property(weak, nonatomic, nullable) id<SectionDelegate> delegate;
 @optional
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                  cardSectionDelegate:(id<SectionDelegate>) sectionDelegate;
+-(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
+                  cardSectionDelegate:(id<SectionDelegate> _Nonnull) sectionDelegate;
 
 @end
 
@@ -115,10 +115,10 @@ typedef NS_ENUM (NSInteger, SectionType) {
 @protocol CardSectionBuilderProtocol <SectionBuilderProtocol>
 
 
-@property(weak, nonatomic) id<CardSectionDelegate> delegate;
+@property(weak, nonatomic, nullable) id<CardSectionDelegate> delegate;
 @optional
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                  cardSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate;
+-(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
+                  cardSectionDelegate:(id<CardSectionDelegate> _Nonnull) cardSectionDelegate;
 
 @end
 
