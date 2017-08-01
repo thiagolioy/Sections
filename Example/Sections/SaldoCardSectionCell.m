@@ -15,8 +15,6 @@
 #import "WhiteSpaceCellBuilder.h"
 #import "ActionsCellBuilder.h"
 
-
-
 @implementation SaldoCardSectionCell
 
 @synthesize delegate, cellBuilders, collection;
@@ -25,8 +23,8 @@
 -(instancetype)initWithCollectionView:(UICollectionView*)collectionView andCellDelegate:(id<CellDelegate>) cellDelegate{
     self = [super init];
     if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
+        collection = collectionView;
+        delegate = cellDelegate;
         [self setupCellBuildersFor:collectionView];
     }
     return self;
@@ -34,13 +32,13 @@
 
 -(void)setupCellBuildersFor:(UICollectionView*)collectionView{
     NSArray *builders = @[
-                         [[SaldoCellBuilder alloc] initWithCollectionView:collectionView andCellDelegate:self.delegate],
-                         [[WhiteSpaceCellBuilder alloc] initWithCollectionView:collectionView],
-                         [[ActionsCellBuilder alloc] initWithCollectionView:collectionView andCellDelegate:self.delegate]
+                         [[SaldoCellBuilder alloc] initWithCellDelegate:self.delegate],
+                         [[WhiteSpaceCellBuilder alloc] init],
+                         [[ActionsCellBuilder alloc] initWithCellDelegate:self.delegate]
                          ];
     self.cellBuilders = builders;
     for(id<CellBuilderProtocol> builder in self.cellBuilders) {
-        [builder registerCell];
+        [builder registerCellInCollectionView:collectionView];
     }
 }
 
@@ -55,7 +53,7 @@
 }
 -(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder cellForItemAtIndexPath:indexPath];
+    return [builder cellForItemAtIndexPath:indexPath inCollectionView:self.collection];
 }
 
 @end

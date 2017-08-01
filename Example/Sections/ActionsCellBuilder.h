@@ -10,5 +10,5 @@
 #import "CellBuilderProtocol.h"
 
 @interface ActionsCellBuilder : NSObject<CellBuilderProtocol>
-
+-(instancetype _Nonnull)initWithCellDelegate:(id<CellDelegate> _Nonnull) cellDelegate;
 @end

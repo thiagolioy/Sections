@@ -46,7 +46,8 @@ typedef NS_ENUM (NSInteger, SectionType) {
     SaldoCardSection,
     PendenciasCardSection,
     FeedbackCardSection,
-    CobrancaCardSection
+    CobrancaCardSection,
+    BannerCardSection
 };
 
 @protocol CardSectionDelegate;

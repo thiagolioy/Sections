@@ -10,31 +10,14 @@
 #import "PendenciasCell.h"
 
 @implementation PendenciasCellBuilder
-@synthesize collection, delegate;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView{
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
-    }
-    return self;
-}
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                      andCellDelegate:(id<CellDelegate>) cellDelegate {
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
-    }
-    return self;
-}
--(void)registerCell{
-    [PendenciasCell registerForCollectionView:self.collection];
+-(void)registerCellInCollectionView:(UICollectionView *)collectionView {
+    [PendenciasCell registerForCollectionView:collectionView];
 }
 
--(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
     
-    PendenciasCell *cell = (PendenciasCell*)[self.collection dequeueReusableCellWithReuseIdentifier:[PendenciasCell cellIdentifier] forIndexPath:indexPath];
+    PendenciasCell *cell = (PendenciasCell*)[collectionView dequeueReusableCellWithReuseIdentifier:[PendenciasCell cellIdentifier] forIndexPath:indexPath];
     return cell;
 }
 -(CGSize)sizeWithin:(CGRect)bounds{

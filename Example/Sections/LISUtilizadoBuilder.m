@@ -11,31 +11,13 @@
 
 @implementation LISUtilizadoBuilder
 
-@synthesize collection, delegate;
-
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView{
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
-    }
-    return self;
-}
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                      andCellDelegate:(id<CellDelegate>) cellDelegate {
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
-    }
-    return self;
-}
--(void)registerCell{
-    [LISUtilizadoCell registerForCollectionView:self.collection];
+-(void)registerCellInCollectionView:(UICollectionView *)collectionView {
+    [LISUtilizadoCell registerForCollectionView:collectionView];
 }
 
--(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
     
-    LISUtilizadoCell *cell = (LISUtilizadoCell*)[self.collection dequeueReusableCellWithReuseIdentifier:[LISUtilizadoCell cellIdentifier] forIndexPath:indexPath];
+    LISUtilizadoCell *cell = (LISUtilizadoCell*)[collectionView dequeueReusableCellWithReuseIdentifier:[LISUtilizadoCell cellIdentifier] forIndexPath:indexPath];
     return cell;
 }
 -(CGSize)sizeWithin:(CGRect)bounds{

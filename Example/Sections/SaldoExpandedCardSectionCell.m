@@ -25,28 +25,28 @@
 -(instancetype)initWithCollectionView:(UICollectionView*)collectionView andCellDelegate:(id<CellDelegate>) cellDelegate{
     self = [super init];
     if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
+        collection = collectionView;
+        delegate = cellDelegate;
         [self setupCellBuildersFor:collectionView];
     }
     return self;
 }
 
--(void)setupCellBuildersFor:(UICollectionView*)collectionView{
+-(void)setupCellBuildersFor:(UICollectionView*)collectionView {
     NSArray *builders = @[
-                          [[SaldoCellBuilder alloc] initWithCollectionView:collectionView andCellDelegate:self.delegate],
-                          [[PriceCellBuilder alloc] initWithCollectionView:collectionView],
-                          [[WhiteSpaceCellBuilder alloc] initWithCollectionView:collectionView],
-                          [[LISCellBuilder alloc] initWithCollectionView:collectionView],
-                          [[WhiteSpaceCellBuilder alloc] initWithCollectionView:collectionView],
-                          [[LISUtilizadoBuilder alloc] initWithCollectionView:collectionView],
-                          [[WhiteSpaceCellBuilder alloc] initWithCollectionView:collectionView],
-                          [[SaldoLISBuilder alloc] initWithCollectionView:collectionView],
-                          [[ActionsCellBuilder alloc] initWithCollectionView:collectionView andCellDelegate:self.delegate]
+                          [[SaldoCellBuilder alloc] initWithCellDelegate:self.delegate],
+                          [[PriceCellBuilder alloc] init],
+                          [[WhiteSpaceCellBuilder alloc] init],
+                          [[LISCellBuilder alloc] init],
+                          [[WhiteSpaceCellBuilder alloc] init],
+                          [[LISUtilizadoBuilder alloc] init],
+                          [[WhiteSpaceCellBuilder alloc] init],
+                          [[SaldoLISBuilder alloc] init],
+                          [[ActionsCellBuilder alloc] initWithCellDelegate:self.delegate]
                           ];
     self.cellBuilders = builders;
     for(id<CellBuilderProtocol> builder in self.cellBuilders) {
-        [builder registerCell];
+        [builder registerCellInCollectionView:collection];
     }
 }
 
@@ -61,7 +61,7 @@
 
 -(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder cellForItemAtIndexPath:indexPath];
+    return [builder cellForItemAtIndexPath:indexPath inCollectionView:self.collection];
 }
 
 

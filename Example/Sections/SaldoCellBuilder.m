@@ -9,32 +9,26 @@
 #import "SaldoCellBuilder.h"
 #import "SaldoCell.h"
 
-@implementation SaldoCellBuilder
-@synthesize collection, delegate;
+@interface SaldoCellBuilder ()
+@property(nonatomic, weak, nullable) id<CellDelegate> delegate;
+@end
 
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView{
+@implementation SaldoCellBuilder
+
+-(instancetype)initWithCellDelegate:(id<CellDelegate>) cellDelegate {
     self = [super init];
     if(self) {
-        self.collection = collectionView;
-    }
-    return self;
-}
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                      andCellDelegate:(id<CellDelegate>) cellDelegate {
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
         self.delegate = cellDelegate;
     }
     return self;
 }
--(void)registerCell{
-    [SaldoCell registerForCollectionView:self.collection];
+-(void)registerCellInCollectionView:(UICollectionView *)collectionView {
+    [SaldoCell registerForCollectionView:collectionView];
 }
 
--(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
     
-    SaldoCell *cell = (SaldoCell*)[self.collection dequeueReusableCellWithReuseIdentifier:[SaldoCell cellIdentifier] forIndexPath:indexPath];
+    SaldoCell *cell = (SaldoCell*)[collectionView dequeueReusableCellWithReuseIdentifier:[SaldoCell cellIdentifier] forIndexPath:indexPath];
     cell.delegate = self.delegate;
     return cell;
 }

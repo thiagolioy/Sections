@@ -16,21 +16,21 @@
 -(instancetype)initWithCollectionView:(UICollectionView*)collectionView andCellDelegate:(id<CellDelegate>) cellDelegate{
     self = [super init];
     if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
+        collection = collectionView;
+        delegate = cellDelegate;
         [self setupCellBuildersFor:collectionView];
     }
     return self;
 }
 
--(void)setupCellBuildersFor:(UICollectionView*)collectionView{
+-(void)setupCellBuildersFor:(UICollectionView*)collectionView {
     NSArray *builders = @[
-                          [[PendenciasCellBuilder alloc] initWithCollectionView:collectionView andCellDelegate:self.delegate]
+                          [[PendenciasCellBuilder alloc] init]
 
                           ];
     self.cellBuilders = builders;
     for(id<CellBuilderProtocol> builder in self.cellBuilders) {
-        [builder registerCell];
+        [builder registerCellInCollectionView:collectionView];
     }
 }
 
@@ -44,9 +44,9 @@
     return [builder sizeWithin:self.collection.bounds];
 }
 
--(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath{
+-(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder cellForItemAtIndexPath:indexPath];
+    return [builder cellForItemAtIndexPath:indexPath inCollectionView:self.collection];
 }
 
 @end
