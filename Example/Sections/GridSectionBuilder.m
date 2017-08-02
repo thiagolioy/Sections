@@ -10,7 +10,6 @@
 #import "GridSectionImpl.h"
 
 @implementation GridSectionBuilder
-@synthesize delegate;
 
 -(instancetype)initWithSectionDelegate:(id<SectionDelegate>) sectionDelegate {
     self = [super init];

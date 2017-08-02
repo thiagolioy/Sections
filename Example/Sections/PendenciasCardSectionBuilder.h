@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "SectionCellInfraProtocols.h"
 
-@interface PendenciasCardSectionBuilder : NSObject<CardSectionBuilderProtocol>
+@interface PendenciasCardSectionBuilder : NSObject<SectionBuilderProtocol>
+@property(nonatomic, weak, nullable) id<CardSectionDelegate> delegate;
+
 -(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate;
 @end

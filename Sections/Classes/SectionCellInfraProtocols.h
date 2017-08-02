@@ -91,17 +91,3 @@ typedef NS_ENUM (NSInteger, SectionType) {
 -(id<Section> _Nonnull)section;
 
 @end
-
-
-@protocol GridBuilderProtocol <SectionBuilderProtocol>
-@property(weak, nonatomic, nullable) id<SectionDelegate> delegate;
-@end
-
-
-@protocol CardSectionBuilderProtocol <SectionBuilderProtocol>
-
-@property(weak, nonatomic, nullable) id<CardSectionDelegate> delegate;
-
-@end
-
-

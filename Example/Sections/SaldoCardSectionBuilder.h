@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SectionCellInfraProtocols.h"
 
-@interface SaldoCardSectionBuilder : NSObject<CardSectionBuilderProtocol>
+@interface SaldoCardSectionBuilder : NSObject<SectionBuilderProtocol>
+@property(nonatomic, weak, nullable) id<CardSectionDelegate> delegate;
+
 -(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate;
 @end

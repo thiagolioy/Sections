@@ -11,7 +11,6 @@
 #import "CardSectionImpl.h"
 
 @implementation PendenciasCardSectionBuilder
-@synthesize delegate;
 
 -(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate {
     self = [super init];

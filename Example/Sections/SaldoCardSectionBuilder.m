@@ -12,7 +12,6 @@
 #import "CardSectionImpl.h"
 
 @implementation SaldoCardSectionBuilder
-@synthesize delegate;
 
 -(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate {
     self = [super init];
