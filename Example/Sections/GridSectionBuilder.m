@@ -10,13 +10,11 @@
 #import "GridSectionImpl.h"
 
 @implementation GridSectionBuilder
-@synthesize collection, delegate;
+@synthesize delegate;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                  cardSectionDelegate:(id<SectionDelegate>) sectionDelegate {
+-(instancetype)initWithSectionDelegate:(id<SectionDelegate>) sectionDelegate {
     self = [super init];
     if(self) {
-        self.collection = collectionView;
         self.delegate = sectionDelegate;
     }
     return self;
@@ -26,7 +24,7 @@
 
 -(id<Section>)section {
     
-    GridSectionImpl *section = [[GridSectionImpl alloc] initWithCollectionView:self.collection andSectionDelegate:self.delegate];
+    GridSectionImpl *section = [[GridSectionImpl alloc] initWithSectionDelegate:self.delegate];
     
     section.items = self.items;
     return section;

@@ -11,5 +11,5 @@
 
 
 @interface SaldoCardSectionCell: NSObject<SectionCell>
-
+-(instancetype)initWithCellDelegate:(id<CellDelegate>) cellDelegate;
 @end

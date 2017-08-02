@@ -10,21 +10,13 @@
 
 @protocol CellDelegate;
 @protocol SectionCell <NSObject>
-@optional
--(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView;
-@optional
--(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
-                 andCellDelegate:(id<CellDelegate> _Nonnull) cellDelegate;
-
-@property (weak, nonatomic, nullable, readonly) UICollectionView *collection;
-@property (weak, nonatomic, nullable, readonly) id<CellDelegate> delegate;
 @property (strong, nonatomic, nonnull) NSArray *cellBuilders;
 
 @required
--(void)registerCellsForBuilders;
+-(void)registerCellsForBuildersInCollectionView:(UICollectionView* _Nonnull)collectionView;
 -(NSInteger)numberOfItems;
--(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath;
--(UICollectionViewCell* _Nonnull)sectionItemCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
+-(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath inCollectionView:(UICollectionView* _Nonnull)collectionView;
+-(UICollectionViewCell* _Nonnull)sectionItemCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath inCollectionView:(UICollectionView* _Nonnull)collectionView;
 
 @end
 
@@ -55,16 +47,16 @@ typedef NS_ENUM (NSInteger, SectionType) {
 @protocol Section <NSObject>
 
 @property(weak, nonatomic, nullable) id<SectionDelegate> sectionDelegate;
-
+-(void)registerCellsForBuildersInCollectionView:(UICollectionView* _Nonnull)collectionView;
 -(NSInteger)numberOfItems;
--(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
--(UICollectionViewCell* _Nonnull)sectionItemCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
--(CGFloat)minimumInteritemSpacingForSectionAtIndex:(NSInteger) index;
--(CGFloat)minimumLineSpacingForSectionAtIndex:(NSInteger) index;
--(CGSize)sectionHeaderSize;
--(UICollectionReusableView* _Nonnull)sectionHeaderCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath;
+-(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath* _Nonnull) indexPath inCollectionView:(UICollectionView*)collectionView;
+-(UICollectionViewCell* _Nonnull)sectionItemCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath inCollectionView:(UICollectionView*)collectionView;
+-(CGFloat)minimumInteritemSpacingForSectionAtIndex:(NSInteger) index inCollectionView:(UICollectionView*)collectionView;
+-(CGFloat)minimumLineSpacingForSectionAtIndex:(NSInteger) index inCollectionView:(UICollectionView*)collectionView;
+-(CGSize)sectionHeaderSizeInCollectionView:(UICollectionView*) collectionView;
+-(UICollectionReusableView* _Nonnull)sectionHeaderCellAtIndexPath:(NSIndexPath* _Nonnull) indexPath inCollectionView:(UICollectionView*)collectionView;
 -(UIEdgeInsets)insetForSectionAtIndex;
--(void)didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+-(void)didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath inCollectionView:(UICollectionView*)collectionView;
 @end
 
 
@@ -95,7 +87,6 @@ typedef NS_ENUM (NSInteger, SectionType) {
 
 @protocol SectionBuilderProtocol <NSObject>
 @property(nonatomic, assign) SectionType type;
-@property(weak, nonatomic, nullable) UICollectionView *collection;
 
 -(id<Section> _Nonnull)section;
 
@@ -103,23 +94,13 @@ typedef NS_ENUM (NSInteger, SectionType) {
 
 
 @protocol GridBuilderProtocol <SectionBuilderProtocol>
-
-
 @property(weak, nonatomic, nullable) id<SectionDelegate> delegate;
-@optional
--(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
-                  cardSectionDelegate:(id<SectionDelegate> _Nonnull) sectionDelegate;
-
 @end
 
 
 @protocol CardSectionBuilderProtocol <SectionBuilderProtocol>
 
-
 @property(weak, nonatomic, nullable) id<CardSectionDelegate> delegate;
-@optional
--(instancetype _Nonnull)initWithCollectionView:(UICollectionView* _Nonnull)collectionView
-                  cardSectionDelegate:(id<CardSectionDelegate> _Nonnull) cardSectionDelegate;
 
 @end
 

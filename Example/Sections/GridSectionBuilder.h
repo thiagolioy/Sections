@@ -10,4 +10,6 @@
 #import "SectionCellInfraProtocols.h"
 @interface GridSectionBuilder : NSObject<GridBuilderProtocol>
 @property(nonatomic, strong) NSArray *items;
+
+-(instancetype)initWithSectionDelegate:(id<SectionDelegate>) sectionDelegate;
 @end

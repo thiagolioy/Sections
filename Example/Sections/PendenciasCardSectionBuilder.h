@@ -10,4 +10,5 @@
 #import "SectionCellInfraProtocols.h"
 
 @interface PendenciasCardSectionBuilder : NSObject<CardSectionBuilderProtocol>
+-(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate;
 @end

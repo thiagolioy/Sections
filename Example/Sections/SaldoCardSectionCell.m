@@ -15,28 +15,32 @@
 #import "WhiteSpaceCellBuilder.h"
 #import "ActionsCellBuilder.h"
 
+@interface SaldoCardSectionCell ()
+@property(nonatomic, weak, nullable) id<CellDelegate> delegate;
+@end
 @implementation SaldoCardSectionCell
 
-@synthesize delegate, cellBuilders, collection;
+@synthesize cellBuilders;
 
-
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView andCellDelegate:(id<CellDelegate>) cellDelegate{
+-(instancetype)initWithCellDelegate:(id<CellDelegate>) cellDelegate {
     self = [super init];
     if(self) {
-        collection = collectionView;
-        delegate = cellDelegate;
-        [self setupCellBuildersFor:collectionView];
+        self.delegate = cellDelegate;
+        [self setupCellBuilders];
     }
     return self;
 }
 
--(void)setupCellBuildersFor:(UICollectionView*)collectionView{
+-(void)setupCellBuilders {
     NSArray *builders = @[
                          [[SaldoCellBuilder alloc] initWithCellDelegate:self.delegate],
                          [[WhiteSpaceCellBuilder alloc] init],
                          [[ActionsCellBuilder alloc] initWithCellDelegate:self.delegate]
                          ];
     self.cellBuilders = builders;
+}
+
+-(void)registerCellsForBuildersInCollectionView:(UICollectionView *)collectionView {
     for(id<CellBuilderProtocol> builder in self.cellBuilders) {
         [builder registerCellInCollectionView:collectionView];
     }
@@ -47,13 +51,13 @@
     return self.cellBuilders.count;
 }
 
--(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath *)indexPath {
+-(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder sizeWithin:self.collection.bounds];
+    return [builder sizeWithin:collectionView.bounds];
 }
--(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder cellForItemAtIndexPath:indexPath inCollectionView:self.collection];
+    return [builder cellForItemAtIndexPath:indexPath inCollectionView:collectionView];
 }
 
 @end

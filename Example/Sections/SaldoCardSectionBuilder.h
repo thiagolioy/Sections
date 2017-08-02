@@ -10,5 +10,5 @@
 #import "SectionCellInfraProtocols.h"
 
 @interface SaldoCardSectionBuilder : NSObject<CardSectionBuilderProtocol>
-
+-(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate;
 @end
