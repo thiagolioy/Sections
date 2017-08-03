@@ -10,31 +10,14 @@
 #import "SaldoLISCell.h"
 
 @implementation SaldoLISBuilder
-@synthesize collection, delegate;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView{
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
-    }
-    return self;
-}
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-                      andCellDelegate:(id<CellDelegate>) cellDelegate {
-    self = [super init];
-    if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
-    }
-    return self;
-}
--(void)registerCell{
-    [SaldoLISCell registerForCollectionView:self.collection];
+-(void)registerCellInCollectionView:(UICollectionView *)collectionView {
+    [SaldoLISCell registerForCollectionView:collectionView];
 }
 
--(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
     
-    SaldoLISCell *cell = (SaldoLISCell*)[self.collection dequeueReusableCellWithReuseIdentifier:[SaldoLISCell cellIdentifier] forIndexPath:indexPath];
+    SaldoLISCell *cell = (SaldoLISCell*)[collectionView dequeueReusableCellWithReuseIdentifier:[SaldoLISCell cellIdentifier] forIndexPath:indexPath];
     return cell;
 }
 -(CGSize)sizeWithin:(CGRect)bounds{

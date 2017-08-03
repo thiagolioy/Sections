@@ -11,7 +11,6 @@
 
 @interface GridSectionImpl : NSObject<Section>
 @property(nonatomic, strong) NSArray *items;
-@property(nonatomic, weak) UICollectionView *collectionView;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collection andSectionDelegate:(id<SectionDelegate>) delegate;
+-(instancetype)initWithSectionDelegate:(id<SectionDelegate>) delegate;
 @end

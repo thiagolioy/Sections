@@ -11,42 +11,42 @@
 #import "PendenciasCellBuilder.h"
 
 @implementation PendenciasCardSectionCell
-@synthesize delegate, cellBuilders, collection;
+@synthesize cellBuilders;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView andCellDelegate:(id<CellDelegate>) cellDelegate{
+-(instancetype)init {
     self = [super init];
     if(self) {
-        self.collection = collectionView;
-        self.delegate = cellDelegate;
-        [self setupCellBuildersFor:collectionView];
+        [self setupCellBuilders];
     }
     return self;
 }
 
--(void)setupCellBuildersFor:(UICollectionView*)collectionView{
+-(void)setupCellBuilders {
     NSArray *builders = @[
-                          [[PendenciasCellBuilder alloc] initWithCollectionView:collectionView andCellDelegate:self.delegate]
+                          [[PendenciasCellBuilder alloc] init]
 
                           ];
     self.cellBuilders = builders;
-    for(id<CellBuilderProtocol> builder in self.cellBuilders) {
-        [builder registerCell];
-    }
 }
 
+-(void)registerCellsForBuildersInCollectionView:(UICollectionView *)collectionView {
+    for(id<CellBuilderProtocol> builder in self.cellBuilders) {
+        [builder registerCellInCollectionView:collectionView];
+    }
+}
 
 -(NSInteger)numberOfItems {
     return self.cellBuilders.count;
 }
 
--(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath *)indexPath {
+-(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView *)collectionView {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder sizeWithin:self.collection.bounds];
+    return [builder sizeWithin:collectionView.bounds];
 }
 
--(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath{
+-(UICollectionViewCell *)sectionItemCellAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView *)collectionView {
     id<CellBuilderProtocol> builder = self.cellBuilders[indexPath.row];
-    return [builder cellForItemAtIndexPath:indexPath];
+    return [builder cellForItemAtIndexPath:indexPath inCollectionView:collectionView];
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SectionCellInfraProtocols.h"
-@interface GridSectionBuilder : NSObject<GridBuilderProtocol>
+@interface GridSectionBuilder : NSObject<SectionBuilderProtocol>
 @property(nonatomic, strong) NSArray *items;
+@property(nonatomic, weak, nullable) id<SectionDelegate> delegate;
+
+-(instancetype)initWithSectionDelegate:(id<SectionDelegate>) sectionDelegate;
 @end

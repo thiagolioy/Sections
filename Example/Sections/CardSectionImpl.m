@@ -13,12 +13,10 @@
 @implementation CardSectionImpl
 @synthesize cardState, regularSectionCell, expandedSectionCell, cardSectionDelegate, sectionDelegate;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collection{
+-(instancetype)init {
     self = [super init];
     if(self) {
         cardState = kRegularState;
-        self.collectionView = collection;
-        [self registerHeaderSectionViewsIn: collection];
     }
     return self;
 }
@@ -50,22 +48,27 @@
     [CollectionViewReusableHeader registerHeaderCellIn:collection];
 }
 
+-(void)registerCellsForBuildersInCollectionView:(UICollectionView *)collectionView {
+    [self registerHeaderSectionViewsIn:collectionView];
+    [[self regularSectionCell] registerCellsForBuildersInCollectionView:collectionView];
+    [[self expandedSectionCell] registerCellsForBuildersInCollectionView:collectionView];
+}
 
 -(NSInteger)numberOfItems {
     return [[self visibleSectionCell] numberOfItems];
 }
--(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath {
-    return [[self visibleSectionCell] sectionItemSizeAtIndexPath:indexPath];
+-(CGSize)sectionItemSizeAtIndexPath:(NSIndexPath*) indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
+    return [[self visibleSectionCell] sectionItemSizeAtIndexPath:indexPath inCollectionView:collectionView];
 }
--(UICollectionViewCell*)sectionItemCellAtIndexPath:(NSIndexPath*) indexPath {
-    return [[self visibleSectionCell] sectionItemCellAtIndexPath:indexPath];
+-(UICollectionViewCell*)sectionItemCellAtIndexPath:(NSIndexPath*) indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
+    return [[self visibleSectionCell] sectionItemCellAtIndexPath:indexPath inCollectionView:collectionView];
 }
 
--(CGFloat)minimumInteritemSpacingForSectionAtIndex:(NSInteger)index{
+-(CGFloat)minimumInteritemSpacingForSectionAtIndex:(NSInteger)index inCollectionView:(UICollectionView * _Nonnull)collectionView{
     return 0;
 }
 
--(CGFloat)minimumLineSpacingForSectionAtIndex:(NSInteger) index {
+-(CGFloat)minimumLineSpacingForSectionAtIndex:(NSInteger) index inCollectionView:(UICollectionView * _Nonnull)collectionView {
     return 0;
 }
 
@@ -73,12 +76,12 @@
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
--(CGSize)sectionHeaderSize {
-    return CGSizeMake(self.collectionView.bounds.size.width, 50);
+-(CGSize)sectionHeaderSizeInCollectionView:(UICollectionView*) collectionView {
+    return CGSizeMake(collectionView.bounds.size.width, 50);
 }
 
--(UICollectionReusableView*)sectionHeaderCellAtIndexPath:(NSIndexPath*) indexPath {
-    CollectionViewReusableHeader *reusableview = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[CollectionViewReusableHeader cellIdentifier] forIndexPath:indexPath];
+-(UICollectionReusableView*)sectionHeaderCellAtIndexPath:(NSIndexPath*) indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
+    CollectionViewReusableHeader *reusableview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[CollectionViewReusableHeader cellIdentifier] forIndexPath:indexPath];
     NSString *title = [NSString stringWithFormat:@"Section Title: %@", @(indexPath.section)];
     [reusableview setupWith:title];
     
@@ -103,7 +106,7 @@
         [self.cardSectionDelegate presentAdditionalDetailsFor:self];
 }
 
--(void)didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+-(void)didSelectItemAtIndexPath:(NSIndexPath *)indexPath inCollectionView:(UICollectionView * _Nonnull)collectionView {
 }
 
 

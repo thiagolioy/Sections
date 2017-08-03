@@ -10,7 +10,6 @@
 #import "SectionCellInfraProtocols.h"
 
 @interface CardSectionImpl : NSObject<CardSection, CellDelegate>
-@property(nonatomic, weak) UICollectionView *collectionView;
--(instancetype)initWithCollectionView:(UICollectionView*)collection;
+-(instancetype)init;
 @end
 

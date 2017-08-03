@@ -52,7 +52,6 @@
     NSLog(@"Selected Item %@", @(index));
 }
 
-
 -(void)setupTableView {
     self.collectionView.delegate = self.datasource;
     self.collectionView.dataSource = self.datasource;

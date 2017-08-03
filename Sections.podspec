@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Sections'
-  s.version          = '0.0.1'
+  s.version          = '0.0.4'
   s.summary          = 'Sections pod creates an abstraction to work with Sections with specific needs'
 
 # This description is used to generate tags and improve search results.

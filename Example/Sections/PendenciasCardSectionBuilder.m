@@ -11,13 +11,10 @@
 #import "CardSectionImpl.h"
 
 @implementation PendenciasCardSectionBuilder
-@synthesize collection, delegate;
 
--(instancetype)initWithCollectionView:(UICollectionView*)collectionView
-             cardSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate{
+-(instancetype)initWithSectionDelegate:(id<CardSectionDelegate>) cardSectionDelegate {
     self = [super init];
     if(self) {
-        self.collection = collectionView;
         self.delegate = cardSectionDelegate;
     }
     return self;
@@ -25,9 +22,9 @@
 
 -(id<Section>)section {
     
-    CardSectionImpl *section = [[CardSectionImpl alloc] initWithCollectionView:self.collection];
+    CardSectionImpl *section = [[CardSectionImpl alloc] init];
     
-    PendenciasCardSectionCell *pendenciasCardSection = [[PendenciasCardSectionCell alloc] initWithCollectionView:self.collection andCellDelegate:section];
+    PendenciasCardSectionCell *pendenciasCardSection = [[PendenciasCardSectionCell alloc] init];
     
     section.regularSectionCell = pendenciasCardSection;
     
